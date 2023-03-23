@@ -12,7 +12,10 @@ for _, key in pairs(_env) do
     end
 end
 
-local engine do 
+local engine do
+    engine = {}
+    engine.__index = engine
+    
     function engine:sprint()
         _cached.Sprint()
     end
